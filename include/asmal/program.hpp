@@ -21,9 +21,9 @@ namespace asmal {
         std::unordered_map<global_offset, library> _libraries;
 
     public:
-        /** Bootstraps the program at the given path. */
-        explicit program(const char path[]);
+        /** Initializes the program at the given path. */
+        explicit program(const char *path);
         /** Executes the ASMAL program and returns its result code. */
-        i32 run();
+        i32 run(u32 argc, byte *const*argv);
     };
 }

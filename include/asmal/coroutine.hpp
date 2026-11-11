@@ -51,7 +51,7 @@ namespace asmal {
         /** The unique id of this coroutine. */
         id _id;
         /** The global offset of this coroutine's next instruction. */
-        global_offset _next;
+        global_offset _next_instruction;
         /** The earliest time to execute this coroutine again. */
         time _execution_time;
         /** Each promised coroutine to dispatch this coroutine's return value to. */

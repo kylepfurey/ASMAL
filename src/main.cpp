@@ -4,7 +4,20 @@
 
 #include <asmal/program.hpp>
 
-/** Executes a ASMAL program. */
+/** Executes an ASMAL program. */
 int main(int argc, char *argv[]) {
-    return asmal::program(argc > 0 ? argv[1] : nullptr).run();
+    if (argc > 1) {
+        return static_cast<int>(
+            asmal::program(argv[1]).run(
+                static_cast<asmal::u32>(argc - 2),
+                reinterpret_cast<asmal::byte *const*>(argv + 2)
+            )
+        );
+    }
+    return static_cast<int>(
+        asmal::program(nullptr).run(
+            0,
+            nullptr
+        )
+    );
 }
