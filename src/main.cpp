@@ -2,11 +2,9 @@
 // ASMAL Entry Point
 // by Kyle Furey
 
-#include <mio/mmap.hpp>
-#include <dylib.hpp>
-#include <ffi.h>
+#include <asmal/program.hpp>
 
-/** TODO */
+/** Executes a ASMAL program. */
 int main(int argc, char *argv[]) {
-    return 0;
+    return asmal::program(argc > 0 ? argv[1] : nullptr).run();
 }

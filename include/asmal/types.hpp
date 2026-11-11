@@ -24,20 +24,14 @@ namespace asmal {
     using f64 = double;
 
     /** ASMAL */
+    using boolean = u32;
     using size = u32;
     using local_offset = u32;
-    using global_offset = u32;
+    using global_offset = u64;
     using stack_offset = u32;
     using pointer = u64;
     using index = u32;
     using id = u32;
     using time = u64;
-    class program;
-    class filestream;
-    struct opcode;
-    struct rodata;
-    class coroutine;
-    class stack;
-    class library;
     using error = std::runtime_error;
 }
