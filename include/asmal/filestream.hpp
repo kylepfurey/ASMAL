@@ -18,7 +18,7 @@ namespace asmal {
 
     /** Maps files into memory for random access and iteration. */
     class filestream final {
-        /** Each file mapped in memory. */
+        /** Each mapped file in memory. */
         std::vector<mio::mmap_source> _files;
 
     public:
